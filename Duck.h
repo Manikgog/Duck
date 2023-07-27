@@ -28,47 +28,53 @@ public:
 
 	~Duck() 
 	{
-		if (quackBehavior)
+		if (this->quackBehavior)
 		{
-			delete quackBehavior;
-			quackBehavior = nullptr;
+			delete this->quackBehavior;
+			this->quackBehavior = nullptr;
 		}
-		if (flyBehavior)
+		if (this->flyBehavior)
 		{
-			delete flyBehavior;
-			flyBehavior = nullptr;
+			delete this->flyBehavior;
+			this->flyBehavior = nullptr;
 		}
 	}
 
 	void SetFlyBehavior(IFlyBehavior* _flyBehavior)
 	{
-		if (flyBehavior)
+		if (this->flyBehavior)
 		{
-			delete flyBehavior;
-			flyBehavior = nullptr;
+			delete this->flyBehavior;
+			this->flyBehavior = nullptr;
 		}
 		
-		flyBehavior = _flyBehavior;
+		this->flyBehavior = _flyBehavior;
 	}
 
 	void SetQuackBehavior(IQuackBehavior* _quackBehavior)
 	{
-		if (quackBehavior)
+		if (this->quackBehavior)
 		{
-			delete quackBehavior;
-			quackBehavior = nullptr;
+			delete this->quackBehavior;
+			this->quackBehavior = nullptr;
 		}
-		quackBehavior = _quackBehavior;
+		this->quackBehavior = _quackBehavior;
 	}
 	
+	/*!
+	\brief метод-геттер для получения указателя flyBehavior (поля класса Duck)
+	*/
 	IFlyBehavior* GetFlyBehavior()
 	{
-		return flyBehavior;
+		return this->flyBehavior;
 	}
 
+	/*!
+	\brief метод-геттер для получения указателя quackBehavior (поля класса Duck)
+	*/
 	IQuackBehavior* GetQuackBehavior()
 	{
-		return quackBehavior;
+		return this->quackBehavior;
 	}
 
 
@@ -83,7 +89,7 @@ public:
 	*/
 	void performFly()
 	{
-		flyBehavior->fly();
+		this->flyBehavior->fly();
 	}
 
 	/*!
@@ -91,7 +97,7 @@ public:
 	*/
 	void performQuack()
 	{
-		quackBehavior->quack();
+		this->quackBehavior->quack();
 	}
 
 	/*!

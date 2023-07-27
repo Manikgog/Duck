@@ -3,12 +3,18 @@
 
 #include <iostream>
 
+/*!
+\brief интерфейсный класс представляющий полётное поведение 
+*/
 class IFlyBehavior
 {
 public:
 	virtual void fly() = 0;
 };
 
+/*!
+\brief класс реализующий конкретное полётное поведение
+*/
 class FlyWithWings : public IFlyBehavior
 {
 public:
@@ -18,6 +24,9 @@ public:
 	}
 };
 
+/*!
+\brief класс реализующий конкретное полётное поведение
+*/
 class FlyNoWay : public IFlyBehavior
 {
 public:
@@ -27,6 +36,9 @@ public:
 	}
 };
 
+/*!
+\brief класс реализующий конкретное полётное поведение
+*/
 class FlyRocketPowered : public IFlyBehavior
 {
 public:

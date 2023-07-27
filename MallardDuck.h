@@ -8,8 +8,8 @@ class MallardDuck : public Duck
 public:
 	MallardDuck()
 	{
-		SetFlyBehavior(new FlyWithWings);
-		SetQuackBehavior(new Quack);
+		SetFlyBehavior(new FlyWithWings);	//> задание исходного указателя на классы реализации поведения
+		SetQuackBehavior(new Quack);		//> задание исходного указателя на классы реализации поведения
 	}
 
 	~MallardDuck()

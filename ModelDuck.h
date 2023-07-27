@@ -8,8 +8,8 @@ class ModelDuck : public Duck
 public:
 	ModelDuck()
 	{
-		SetFlyBehavior(new FlyNoWay);
-		SetQuackBehavior(new Quack);
+		SetFlyBehavior(new FlyNoWay);	//> задание исходного указателя на классы реализации поведения
+		SetQuackBehavior(new Quack);	//> задание исходного указателя на классы реализации поведения
 	}
 
 	~ModelDuck()

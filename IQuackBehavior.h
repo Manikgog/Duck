@@ -3,12 +3,18 @@
 
 #include <iostream>
 
+/*!
+\brief интерфейсный класс представляющий звуковое поведение
+*/
 class IQuackBehavior
 {
 public:
 	virtual void quack() = 0;
 };
 
+/*!
+\brief класс реализующий конкретное звуковое поведение
+*/
 class Quack : public IQuackBehavior
 {
 public:
@@ -18,6 +24,9 @@ public:
 	}
 };
 
+/*!
+\brief класс реализующий конкретное звуковое поведение
+*/
 class MuteQuack : public IQuackBehavior
 {
 public:
@@ -27,6 +36,9 @@ public:
 	}
 };
 
+/*!
+\brief класс реализующий конкретное звуковое поведение
+*/
 class Squeak : public IQuackBehavior
 {
 public:

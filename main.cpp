@@ -11,7 +11,7 @@
 
 int main() {
 	
-	/*Duck* mallard = new MallardDuck();
+	Duck* mallard = new MallardDuck();			//> создание указателя на объект класса MallardDuck
 	mallard->SetFlyBehavior(new FlyWithWings);
 	mallard->performFly();
 	mallard->performQuack();
@@ -24,7 +24,7 @@ int main() {
 	Duck* rubberduck = new RubberDuck();
 	rubberduck->performQuack();
 	rubberduck->performFly();
-	delete rubberduck;*/
+	delete rubberduck;
 
 	Duck* modelduck = new ModelDuck();
 	modelduck->performFly();
