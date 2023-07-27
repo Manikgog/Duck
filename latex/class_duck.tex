@@ -1,0 +1,63 @@
+\doxysection{Duck Class Reference}
+\hypertarget{class_duck}{}\label{class_duck}\index{Duck@{Duck}}
+
+
+{\ttfamily \#include $<$Duck.\+h$>$}
+
+Inheritance diagram for Duck\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_duck}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_duck_a98ecf7c31193ae17c05ccedc102da454}\label{class_duck_a98ecf7c31193ae17c05ccedc102da454} 
+void {\bfseries Set\+Fly\+Behavior} (\mbox{\hyperlink{class_i_fly_behavior}{IFly\+Behavior}} \texorpdfstring{$\ast$}{*}\+\_\+fly\+Behavior)
+\item 
+\Hypertarget{class_duck_ac648d11c5d5c6cf21efc50cc6b34af8d}\label{class_duck_ac648d11c5d5c6cf21efc50cc6b34af8d} 
+void {\bfseries Set\+Quack\+Behavior} (\mbox{\hyperlink{class_i_quack_behavior}{IQuack\+Behavior}} \texorpdfstring{$\ast$}{*}\+\_\+quack\+Behavior)
+\item 
+\Hypertarget{class_duck_a1c3c6bbb7b581e233a2a761bcbebef4a}\label{class_duck_a1c3c6bbb7b581e233a2a761bcbebef4a} 
+\mbox{\hyperlink{class_i_fly_behavior}{IFly\+Behavior}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Fly\+Behavior} ()
+\item 
+\Hypertarget{class_duck_a9ff08d785de2e361d849858fe5cb0262}\label{class_duck_a9ff08d785de2e361d849858fe5cb0262} 
+\mbox{\hyperlink{class_i_quack_behavior}{IQuack\+Behavior}} \texorpdfstring{$\ast$}{*} {\bfseries Get\+Quack\+Behavior} ()
+\item 
+virtual void \mbox{\hyperlink{class_duck_a628a4ffb0457c77cae26df8364dc0038}{display}} ()
+\begin{DoxyCompactList}\small\item\em метод, который разный у каждого наследника, но его нет необходимости часто менять \end{DoxyCompactList}\item 
+\Hypertarget{class_duck_a53bc4379af9f2fa4f1d2e3bf49d5e98b}\label{class_duck_a53bc4379af9f2fa4f1d2e3bf49d5e98b} 
+void {\bfseries perform\+Fly} ()
+\begin{DoxyCompactList}\small\item\em функция, вызывающая метод fly() у того класса на который направлен указатель fly\+Behavior \end{DoxyCompactList}\item 
+\Hypertarget{class_duck_afc5e11f4c0053ee4aa22cf293bfa9050}\label{class_duck_afc5e11f4c0053ee4aa22cf293bfa9050} 
+void {\bfseries perform\+Quack} ()
+\begin{DoxyCompactList}\small\item\em функция, вызывающая метод quack() у того класса на который направлен указатель quack\+Behavior \end{DoxyCompactList}\item 
+\Hypertarget{class_duck_ac3db2fa88822a0b085b759d16e175d7c}\label{class_duck_ac3db2fa88822a0b085b759d16e175d7c} 
+void {\bfseries swim} ()
+\begin{DoxyCompactList}\small\item\em метод, который является неизменным для всех наследников класса \doxylink{class_duck}{Duck} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\textbackslash{}breaf суперкласс \doxylink{class_duck}{Duck} утка От этого класса наследуются все виды уток. В классе имеются два поля fly\+Behavior и quack\+Behavior это указатели на интерфейсы аспектов поведения конкретной утки, и это поведение может даже поменяться в ходе выполнения программы если перенаправить указатель на другой класс описывающий другое поведение. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_duck_a628a4ffb0457c77cae26df8364dc0038}\label{class_duck_a628a4ffb0457c77cae26df8364dc0038} 
+\index{Duck@{Duck}!display@{display}}
+\index{display@{display}!Duck@{Duck}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily virtual void Duck\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+метод, который разный у каждого наследника, но его нет необходимости часто менять 
+
+
+
+Reimplemented in \mbox{\hyperlink{class_mallard_duck_a72a99221c0d05fa7c851f5b150a0570e}{Mallard\+Duck}}, \mbox{\hyperlink{class_model_duck_a86c0193775891a17b7fd94db09d13d64}{Model\+Duck}}, and \mbox{\hyperlink{class_rubber_duck_a035839c7dd34d560bada7bbd527a4cf3}{Rubber\+Duck}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Duck.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,93 @@
+\doxysection{Duck.\+h}
+\hypertarget{_duck_8h_source}{}\label{_duck_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ \_DUCK\_H\_}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ \_DUCK\_H\_}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}IFlyBehavior.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}IQuackBehavior.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_duck}{Duck}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_i_fly_behavior}{IFlyBehavior}}*\ flyBehavior\ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ \ \ \textcolor{comment}{//>\ указатель\ на\ интерфейс\ полётного\ поведения\ утки}}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{class_i_quack_behavior}{IQuackBehavior}}*\ quackBehavior\ =\ \textcolor{keyword}{nullptr};\ \ \textcolor{comment}{//>\ указатель\ на\ интерфейс\ звукового\ поведения\ утки}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_duck}{Duck}}()\ }
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ quackBehavior\ =\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{class_quack}{Quack}}*\textcolor{keyword}{>}(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_quack}{Quack}}());}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ flyBehavior\ =\ \textcolor{keyword}{static\_cast<}\mbox{\hyperlink{class_fly_no_way}{FlyNoWay}}*\textcolor{keyword}{>}(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_fly_no_way}{FlyNoWay}}());}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_duck}{\string~Duck}}()\ }
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (quackBehavior)}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ quackBehavior;}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ quackBehavior\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (flyBehavior)}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ flyBehavior;}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ flyBehavior\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ SetFlyBehavior(\mbox{\hyperlink{class_i_fly_behavior}{IFlyBehavior}}*\ \_flyBehavior)}
+\DoxyCodeLine{00044\ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (flyBehavior)}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ flyBehavior;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ flyBehavior\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ flyBehavior\ =\ \_flyBehavior;}
+\DoxyCodeLine{00052\ \ \ \ \ \}}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ SetQuackBehavior(\mbox{\hyperlink{class_i_quack_behavior}{IQuackBehavior}}*\ \_quackBehavior)}
+\DoxyCodeLine{00055\ \ \ \ \ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (quackBehavior)}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ quackBehavior;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ quackBehavior\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ quackBehavior\ =\ \_quackBehavior;}
+\DoxyCodeLine{00062\ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_i_fly_behavior}{IFlyBehavior}}*\ GetFlyBehavior()}
+\DoxyCodeLine{00065\ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ flyBehavior;}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{class_i_quack_behavior}{IQuackBehavior}}*\ GetQuackBehavior()}
+\DoxyCodeLine{00070\ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ quackBehavior;}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_duck_a628a4ffb0457c77cae26df8364dc0038}{display}}()\ \{\}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_duck_a53bc4379af9f2fa4f1d2e3bf49d5e98b}{performFly}}()}
+\DoxyCodeLine{00085\ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ flyBehavior-\/>fly();}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_duck_afc5e11f4c0053ee4aa22cf293bfa9050}{performQuack}}()}
+\DoxyCodeLine{00093\ \ \ \ \ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ quackBehavior-\/>quack();}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_duck_ac3db2fa88822a0b085b759d16e175d7c}{swim}}()}
+\DoxyCodeLine{00101\ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}All\ ducks\ float,\ even\ decoys!\(\backslash\)n"{}};}
+\DoxyCodeLine{00103\ \ \ \ \ \}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \};}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ !\_DUCK\_H\_}}
+
+\end{DoxyCode}
