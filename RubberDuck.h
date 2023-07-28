@@ -10,8 +10,8 @@ class RubberDuck : public Duck
 public:
 	RubberDuck()
 	{
-		SetFlyBehavior(new FlyNoWay);	//> задание исходного указателя на классы реализации поведения
-		SetQuackBehavior(new Quack);	//> задание исходного указателя на классы реализации поведения
+		SetFlyBehavior(new FlyNoWay);	//> (композиция) задание исходного указателя на классы реализации поведения
+		SetQuackBehavior(new Quack);	//> (композиция) задание исходного указателя на классы реализации поведения
 	}
 	~RubberDuck()
 	{}
